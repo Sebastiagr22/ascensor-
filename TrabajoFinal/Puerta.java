@@ -28,7 +28,9 @@ public class Puerta {
                 System.out.println("SEGURIDAD: Obstáculo detectado. Puertas forzadas a permanecer abiertas.");
             }
    }
-  }
-}
+       }
+    }
+  
+
 
     

@@ -20,4 +20,5 @@ public class Boton {
      public boolean isIluminado (){
         return iluminado;
     }
+
 }
