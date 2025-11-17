@@ -1,12 +1,13 @@
 public class BotonPiso extends Boton {
-    private int piso;
-    private boolean subir; 
+    protected int piso;
+    protected boolean subir; 
 
     public BotonPiso(int piso, boolean subir){
         this.piso = piso;
         this.subir =  subir;
     }
     @Override
+
 public void presionar() {
     super.presionar();
     String direccion;
@@ -16,7 +17,5 @@ public void presionar() {
         direccion = "Bajar";
     }
     System.out.println("Solicitud en piso " + piso + " dirección: " + direccion);
-}
-
-
+ }
 }
