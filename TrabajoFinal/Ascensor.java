@@ -2,9 +2,9 @@ public class Ascensor {
     protected int pisoActual = 1;
     protected boolean subiendo = true;
 
-    protected int inactivo = 0;  
+    protected int inactivo = 0;
     protected int moviendose = 1;
-    protected int detenido = 2;  
+    protected int detenido = 2;
 
     protected int estado = inactivo;
 
@@ -30,15 +30,14 @@ public class Ascensor {
         System.out.println("Ascensor detenido en el piso: " + pisoActual);
     }
 
-  public void cambiarDireccion(boolean nuevaDireccion) {
-    subiendo = nuevaDireccion;
-
-    if (subiendo) {
-        System.out.println("Dirección cambiada a: Subir");
-    } else {
-        System.out.println("Dirección cambiada a: Bajar");
+    public void cambiarDireccion(boolean nuevaDireccion) {
+        subiendo = nuevaDireccion;
+        if (subiendo) {
+            System.out.println("Dirección cambiada a: Subir");
+        } else {
+            System.out.println("Dirección cambiada a: Bajar");
+        }
     }
-}
 
     public void llegarAlPiso(int pisoObjetivo) {
         pisoActual = pisoObjetivo;
@@ -56,7 +55,6 @@ public class Ascensor {
         }
     }
 
-
     public int getPisoActual() {
         return pisoActual;
     }
@@ -67,6 +65,10 @@ public class Ascensor {
 
     public int getEstado() {
         return estado;
+    }
+
+    public void setEstado(int nuevoEstado) {
+        estado = nuevoEstado;
     }
 }
 
