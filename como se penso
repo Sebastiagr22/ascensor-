@@ -1,0 +1,16 @@
+pensando la solución en base a lo que se nos pidio en la entrevista, quise que todo fuera sencillo y claro, usando 
+únicamente las clases que ya tenía definidas. La clase Boton es la base de los botones del ascensor y de la puerta; de 
+ella heredan otras clases como BotonPiso y BotonMantenerPuerta. Esto me permitió un comportamiento común, 
+como presionar, iluminar y apagar el botón, sin repetir código.
+
+Por ejemplo, BotonPiso hereda de Boton y agrega la información del piso y la dirección (subir o bajar), 
+mientras que BotonMantenerPuerta también hereda de Boton y fuerza la puerta a permanecer abierta al presionarlo. 
+Esto facilita que cualquier tipo de botón tenga las funciones básicas de presionar e iluminar, y cada clase derivada 
+puede añadir su comportamiento específico.
+
+Luego, pensé en cómo interactuarían estos botones con la puerta, asegurándome de que la puerta 
+no se cerrara cuando el sensor detectara algo y sí lo hiciera cuando el obstáculo ya no estaba. Finalmente, el ascensor 
+se mueve directamente al piso solicitado, sin mostrar pisos intermedios, para que la simulación sea un poco mas clara
+y directa. al final quise agregarle otras clases como lo fueron controlador y SensorObstaculo ya que en lo
+personal me parecia un poco mas facil crear clases nuevas para que la ejecucion sea mas clara y limpia
+y los codigos fueran mas faciles de entender
