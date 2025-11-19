@@ -1,13 +1,21 @@
+/* Clase Ascensor es la que controla la lógica principal del movimiento del ascensor.*/
 public class Ascensor {
+
+    /*Piso actual del ascensor (inicia en 1). */
     protected int pisoActual = 1;
+
+    /*Dirección actual: true = subiendo, false = bajando. */
     protected boolean subiendo = true;
 
+    /*Estados del ascensor */
     protected int inactivo = 0;
     protected int moviendose = 1;
     protected int detenido = 2;
 
+    /*Estado actual del ascensor. */
     protected int estado = inactivo;
 
+    /*Mueve el ascensor un piso según su dirección.*/
     public void mover() {
         if (estado == moviendose) {
             if (subiendo) {
@@ -21,15 +29,19 @@ public class Ascensor {
         }
     }
 
+    /*Inicia el movimiento del ascensor. */
     public void iniciarMovimiento() {
         estado = moviendose;
     }
 
+    /*para el ascensor. */
     public void parar() {
         estado = detenido;
         System.out.println("Ascensor detenido en el piso: " + pisoActual);
     }
 
+    /* Cambia la dirección del ascensor. 
+    nuevaDireccion true = subir, false = bajar.*/
     public void cambiarDireccion(boolean nuevaDireccion) {
         subiendo = nuevaDireccion;
         if (subiendo) {
@@ -71,4 +83,3 @@ public class Ascensor {
         estado = nuevoEstado;
     }
 }
-

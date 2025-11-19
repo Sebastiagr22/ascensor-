@@ -1,6 +1,6 @@
 public class Simulador {
     public static void main(String[] args) {
-        System.out.println("--- INICIO DE SIMULACIÓN DEL ASCENSOR ---");
+        System.out.println("INICIO DE SIMULACIÓN DEL ASCENSOR ");
 
         SensorObstaculo sensor = new SensorObstaculo();
         Puerta puerta = new Puerta(sensor);
@@ -17,7 +17,7 @@ public class Simulador {
         puerta.cerrar(); // Obstáculo detectado, no se cierra
 
         sensor.desactivar();
-        System.out.println("No se encontraron obstáculos, cerrando puerta...");
+        System.out.println("No se encontraron obstáculos, cerrando puerta..");
         puerta.cerrar(); // Ahora sí se cierra
 
         botonPiso5Subir.apagar();
@@ -25,9 +25,11 @@ public class Simulador {
         ascensor.llegarAlPiso(5); // Llega directo al piso 5
 
         puerta.abrir();
-        System.out.println("No se encontraron obstáculos, cerrando puerta...");
+        System.out.println("No se encontraron obstáculos, cerrando puerta..");
         puerta.cerrar(); // Se cierra normalmente
 
-        System.out.println("--- FIN DE SIMULACIÓN ---");
+
+        System.out.println("FIN DE SIMULACIÓN DEL ASCENSOR ");
+
     }
 }
